@@ -1,18 +1,21 @@
 import React from "react";
-import { MenuItem, Stack } from "@mui/material";
+
 import { Box } from "@mui/system";
+import { Stack } from "@mui/material";
 import Card from "../../../../Components/Card";
+
 import UserBasicInfoCard from "../../User/BasicInfoCard";
 import SidebarHeader from "./sidebarHeader";
+import Navigation from "./Navigation";
 
 const Sidebar = () => {
   return (
-    <Box sx={{ pl: 2, width: 300, minHeight: "100vh" }}>
+    <Box sx={{ pl: 2, width: 350, minHeight: "100vh" }}>
       <Card>
-        <Stack spacing={4}>
+        <Stack spacing={1}>
           <SidebarHeader />
           <UserBasicInfoCard />
-          <MenuItem />
+          <Navigation />
         </Stack>
       </Card>
     </Box>

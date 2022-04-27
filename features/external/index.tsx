@@ -8,7 +8,9 @@ const External = () => {
   return (
     <Layout>
       {EXTERNAL_LINKS.map((item, index) => (
-        <ExternalLinkCard url={item.url}>{item.name}</ExternalLinkCard>
+        <ExternalLinkCard url={item.url} key={index}>
+          {item.name}
+        </ExternalLinkCard>
       ))}
     </Layout>
   );

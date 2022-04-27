@@ -14,78 +14,82 @@ import LinkIcon from "@mui/icons-material/Link";
 
 export const SIDEBAR_MAIN_DATA = [
   {
-    icon: <CottageIcon />,
+    icon: <CottageIcon color="primary" />,
     mainMenu: "Home",
-    url: "",
-    subMenu: [{ label: "Dashboard", url: "/dashboard" }],
+    url: "/",
+    subMenu: [],
   },
   {
-    icon: <OutboxIcon />,
+    icon: <OutboxIcon color="primary" />,
     mainMenu: "Requests",
     url: "",
-    subMenu: [{ label: "Dashboard", url: "/dashboard" }],
+    subMenu: [
+      { label: "Leave Request", url: "/dashboard" },
+      { label: "Overtime Request", url: "/dashboard" },
+      { label: "Permission Request", url: "/dashboard" },
+    ],
   },
   {
-    icon: <ApprovalIcon />,
+    icon: <ApprovalIcon color="primary" />,
     mainMenu: "Administration",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <WorkspacesIcon />,
+    icon: <WorkspacesIcon color="primary" />,
     mainMenu: "Transactions",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <AdminPanelSettingsIcon />,
+    icon: <AdminPanelSettingsIcon color="primary" />,
     mainMenu: "Masters",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <SettingsIcon />,
+    icon: <SettingsIcon color="primary" />,
     mainMenu: "Settings",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <AnalyticsIcon />,
+    icon: <AnalyticsIcon color="primary" />,
     mainMenu: "Reports",
     url: "",
+    subMenu: [{ label: "Dashboard", url: "/dashboard" }],
+  },
+  {
+    icon: <LinkIcon color="primary" />,
+    mainMenu: "Externals",
+    url: "/externals",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
 ];
 
 export const SIDEBAR_SUB_DATA = [
   {
-    icon: <LinkIcon />,
-    mainMenu: "Externals",
-    url: "/externals",
+    icon: <InfoIcon color="primary" />,
+    mainMenu: "About",
+    url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <HelpIcon />,
-    mainMenu: "Help",
-    url: "/help",
-    subMenu: [{ label: "Dashboard", url: "/dashboard" }],
-  },
-  {
-    icon: <PrivacyTipIcon />,
+    icon: <PrivacyTipIcon color="primary" />,
     mainMenu: "Terms & Condition",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <PolicyIcon />,
+    icon: <PolicyIcon color="primary" />,
     mainMenu: "Privacy Policy",
     url: "",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
-    icon: <InfoIcon />,
-    mainMenu: "About",
-    url: "",
+    icon: <HelpIcon color="primary" />,
+    mainMenu: "Help",
+    url: "/help",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
 ];
