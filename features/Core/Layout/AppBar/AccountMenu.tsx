@@ -37,9 +37,7 @@ const AccountMenu = () => {
           >
             <Avatar
               sx={{ width: 32, height: 32, backgroundColor: "secondary.main" }}
-            >
-              M
-            </Avatar>
+            ></Avatar>
           </IconButton>
         </Tooltip>
       </Box>

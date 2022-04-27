@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import Typography from "../../../../Components/Typography";
 import MuiAppBar from "@mui/material/AppBar";
 import { Avatar, Toolbar } from "@mui/material";
+import AccountMenu from "./AccountMenu";
 
 const sAppBar = (props: any) => {
   const { heading } = props;
@@ -16,7 +17,7 @@ const sAppBar = (props: any) => {
           <Typography variant="h2" color="textSecondary" sx={{ flexGrow: 1 }}>
             {heading}
           </Typography>
-          <Avatar></Avatar>
+          <AccountMenu />
         </Toolbar>
       </MuiAppBar>
     </Box>
