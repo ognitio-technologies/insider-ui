@@ -1,11 +1,11 @@
 import { createTheme } from "@mui/material/styles";
-import { red, amber, blueGrey } from "@mui/material/colors";
+import { red, amber, blueGrey, lightBlue } from "@mui/material/colors";
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: amber[800],
+      main: lightBlue[700],
     },
     secondary: {
       main: blueGrey[900],
@@ -22,6 +22,11 @@ const theme = createTheme({
       fontFamily: "Roboto",
       fontWeight: 600,
       fontSize: "2.2rem",
+    },
+    h3: {
+      fontFamily: "Roboto",
+      fontWeight: 500,
+      fontSize: "1.5rem",
     },
     h4: {
       fontFamily: "Roboto",
