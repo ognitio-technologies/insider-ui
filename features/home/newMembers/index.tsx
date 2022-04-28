@@ -1,6 +1,8 @@
 import React from "react";
+import ScrollBox from "../../../Components/Box/ScrollBox";
 import Card from "../../../Components/Card";
 import Typography from "../../../Components/Typography";
+import SeeAll from "../../Core/More/SeeAll";
 import NewMember from "./newMember";
 
 const DATA = [
@@ -29,7 +31,9 @@ const NewMembers = () => {
         New Members
       </Typography>
       <Card height={380} overflow={`auto`}>
-        {members}
+        <ScrollBox height={360}>
+          {members} <SeeAll url="/reports/members" />
+        </ScrollBox>
       </Card>
     </>
   );

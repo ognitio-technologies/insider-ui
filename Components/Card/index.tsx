@@ -1,7 +1,6 @@
 import React from "react";
 import MuiCard from "@mui/material/Card";
 import { CardContent } from "@mui/material";
-import { height } from "@mui/system";
 
 const customStyle = {
   my: 1,
@@ -16,7 +15,6 @@ const Card = (props: any) => {
     minHeight,
     children,
     active = false,
-    overflow = "hidden",
     ...other
   } = props;
   return (
@@ -26,8 +24,6 @@ const Card = (props: any) => {
         width: width,
         minHeight: minHeight,
         height: height,
-        overflow: overflow,
-
         backgroundColor: active && "primary.light",
       }}
       {...other}
