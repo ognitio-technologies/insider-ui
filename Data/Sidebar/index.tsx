@@ -22,7 +22,7 @@ export const SIDEBAR_MAIN_DATA = [
   {
     icon: <OutboxIcon color="primary" />,
     mainMenu: "Requests",
-    url: "",
+    url: "/requests",
     subMenu: [
       { label: "Leave Request", url: "/dashboard" },
       { label: "Overtime Request", url: "/dashboard" },
@@ -32,31 +32,31 @@ export const SIDEBAR_MAIN_DATA = [
   {
     icon: <ApprovalIcon color="primary" />,
     mainMenu: "Administration",
-    url: "",
+    url: "/administration",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <WorkspacesIcon color="primary" />,
     mainMenu: "Transactions",
-    url: "",
+    url: "/transactions",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <AdminPanelSettingsIcon color="primary" />,
     mainMenu: "Masters",
-    url: "",
+    url: "/masters",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <SettingsIcon color="primary" />,
     mainMenu: "Settings",
-    url: "",
+    url: "/settings",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <AnalyticsIcon color="primary" />,
     mainMenu: "Reports",
-    url: "",
+    url: "/reports",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
@@ -71,19 +71,19 @@ export const SIDEBAR_SUB_DATA = [
   {
     icon: <InfoIcon color="primary" />,
     mainMenu: "About",
-    url: "",
+    url: "/privacy",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <PrivacyTipIcon color="primary" />,
     mainMenu: "Terms & Condition",
-    url: "",
+    url: "/terms-and-condition",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {
     icon: <PolicyIcon color="primary" />,
     mainMenu: "Privacy Policy",
-    url: "",
+    url: "/privacy-policy",
     subMenu: [{ label: "Dashboard", url: "/dashboard" }],
   },
   {

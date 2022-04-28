@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useRouter } from "next/router";
 import { List, Stack } from "@mui/material";
@@ -11,15 +11,19 @@ import {
   SIDEBAR_MAIN_DATA,
   SIDEBAR_SUB_DATA,
 } from "../../../../../Data/Sidebar";
+import { activeParentUrl } from "../../../../../utils/activeParentUrl";
 
 const Navigation = () => {
   const router = useRouter();
+
+  const parentUrl = activeParentUrl(router.pathname);
+  console.log("parentUrl", parentUrl);
 
   return (
     <>
       <List component="nav">
         {SIDEBAR_MAIN_DATA.map((item, index) => (
-          <Card key={index} active={router.pathname === item.url}>
+          <Card key={index} active={parentUrl === item.url}>
             <Stack
               alignItems={`center`}
               direction="row"
@@ -32,7 +36,7 @@ const Navigation = () => {
               <Typography
                 color="primary"
                 variant="subtitle1"
-                sx={{ fontWeight: router.pathname === item.url && "bold" }}
+                sx={{ fontWeight: parentUrl === item.url && "bold" }}
               >
                 {item.mainMenu}
               </Typography>
