@@ -11,8 +11,14 @@ import PolicyIcon from "@mui/icons-material/Policy";
 import InfoIcon from "@mui/icons-material/Info";
 import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import LinkIcon from "@mui/icons-material/Link";
+import EventIcon from "@mui/icons-material/Event";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import MoreTimeIcon from "@mui/icons-material/MoreTime";
+import AvTimerIcon from "@mui/icons-material/AvTimer";
 
-export const SIDEBAR_MAIN_DATA = [
+import SendIcon from "@mui/icons-material/Send";
+
+export const MAIN_NAVBAR_DATA = [
   {
     icon: <CottageIcon color="primary" />,
     mainMenu: "Home",
@@ -22,11 +28,28 @@ export const SIDEBAR_MAIN_DATA = [
   {
     icon: <OutboxIcon color="primary" />,
     mainMenu: "Requests",
-    url: "/requests",
+    url: "/requests/leave/single",
     subMenu: [
-      { label: "Leave Request", url: "/dashboard" },
-      { label: "Overtime Request", url: "/dashboard" },
-      { label: "Permission Request", url: "/dashboard" },
+      {
+        label: "Leave Request",
+        url: "/requests/leave/single",
+        icon: <EventIcon color="primary" fontSize="small" />,
+      },
+      {
+        label: "Long Leave Request",
+        url: "/requests/leave/long",
+        icon: <DateRangeIcon color="primary" fontSize="small" />,
+      },
+      {
+        label: "Overtime Request",
+        url: "/dashboard",
+        icon: <MoreTimeIcon color="primary" fontSize="small" />,
+      },
+      {
+        label: "Permission Request",
+        url: "/dashboard",
+        icon: <AvTimerIcon color="primary" fontSize="small" />,
+      },
     ],
   },
   {
@@ -67,7 +90,7 @@ export const SIDEBAR_MAIN_DATA = [
   },
 ];
 
-export const SIDEBAR_SUB_DATA = [
+export const INFORMATIONS_DATA = [
   {
     icon: <InfoIcon color="primary" />,
     mainMenu: "About",

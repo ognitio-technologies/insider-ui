@@ -1,8 +1,14 @@
 import React from "react";
 import Layout from "../../Core/Layout";
+import SecondaryLayout from "../../Core/Layout/SecondaryLayout";
+import { MAIN_NAVBAR_DATA } from "../../../Data/Sidebar/index";
 
-const LeaveRequest = () => {
-  return <Layout heading="Requests">LeaveRequest</Layout>;
+const LeaveRequests = () => {
+  return (
+    <Layout heading="Requests">
+      <SecondaryLayout>leave request form</SecondaryLayout>
+    </Layout>
+  );
 };
 
-export default LeaveRequest;
+export default LeaveRequests;

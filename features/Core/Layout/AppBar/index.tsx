@@ -8,13 +8,17 @@ import AccountMenu from "./AccountMenu";
 const sAppBar = (props: any) => {
   const { heading } = props;
   return (
-    <Box sx={{ flexGrow: 1, width: "100%" }}>
+    <Box sx={{ flexGrow: 1, width: "100%", mt: 1 }}>
       <MuiAppBar
         position="static"
         sx={{ backgroundColor: "transparent", boxShadow: 0 }}
       >
         <Toolbar>
-          <Typography variant="h2" color="textSecondary" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h2"
+            color="textSecondary"
+            sx={{ flexGrow: 1, ml: 2 }}
+          >
             {heading}
           </Typography>
           <AccountMenu />

@@ -1,8 +1,7 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import Typography from "../../../../Components/Typography";
-import RoundedLogo from "../../Logo/index";
-import UserBasicInfoCard from "../../User/BasicInfoCard";
+import Typography from "../../../../../../Components/Typography";
+import RoundedLogo from "../../../../Logo/index";
 
 const SidebarHeader = () => {
   return (

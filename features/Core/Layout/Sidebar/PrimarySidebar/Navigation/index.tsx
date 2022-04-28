@@ -3,27 +3,26 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { List, Stack } from "@mui/material";
 
-import Card from "../../../../../Components/Card";
-import Typography from "../../../../../Components/Typography";
-import Link from "../../../../../Components/Link";
+import Card from "../../../../../../Components/Card";
+import Typography from "../../../../../../Components/Typography";
+import Link from "../../../../../../Components/Link";
 
 import {
-  SIDEBAR_MAIN_DATA,
-  SIDEBAR_SUB_DATA,
-} from "../../../../../Data/Sidebar";
-import { activeParentUrl } from "../../../../../utils/activeParentUrl";
+  MAIN_NAVBAR_DATA,
+  INFORMATIONS_DATA,
+} from "../../../../../../Data/Sidebar";
+import { _activeMainUrl } from "../../../../../../utils/activeUrl";
 
-const Navigation = () => {
+const PrimarySidebarNavigation = () => {
   const router = useRouter();
 
-  const parentUrl = activeParentUrl(router.pathname);
-  console.log("parentUrl", parentUrl);
+  const activeMainUrl = _activeMainUrl(router.pathname);
 
   return (
     <>
       <List component="nav">
-        {SIDEBAR_MAIN_DATA.map((item, index) => (
-          <Card key={index} active={parentUrl === item.url}>
+        {MAIN_NAVBAR_DATA.map((item, index) => (
+          <Card key={index} active={activeMainUrl === item.url}>
             <Stack
               alignItems={`center`}
               direction="row"
@@ -36,7 +35,7 @@ const Navigation = () => {
               <Typography
                 color="primary"
                 variant="subtitle1"
-                sx={{ fontWeight: parentUrl === item.url && "bold" }}
+                sx={{ fontWeight: activeMainUrl === item.url && "bold" }}
               >
                 {item.mainMenu}
               </Typography>
@@ -47,7 +46,7 @@ const Navigation = () => {
       <List component="nav">
         <Card>
           <Typography gutterBottom>Informations & Support</Typography>
-          {SIDEBAR_SUB_DATA.map((item, index) => (
+          {INFORMATIONS_DATA.map((item, index) => (
             <Stack
               spacing={4}
               component={Link}
@@ -74,4 +73,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default PrimarySidebarNavigation;
