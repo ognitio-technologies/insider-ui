@@ -21,6 +21,7 @@ const PasswordField = (props: any) => {
     error = false,
     helperText,
     fullWidth = true,
+    my = 0,
     ...other
   } = props;
   const [showPassword, setShowPasswrod] = useState(false);
@@ -36,7 +37,7 @@ const PasswordField = (props: any) => {
   };
 
   return (
-    <FormControl error={error} fullWidth>
+    <FormControl error={error} sx={{ my: my }} fullWidth>
       <InputLabel htmlFor={id}>{label}</InputLabel>
       {variant !== "outlined" && (
         <Input

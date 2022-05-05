@@ -4,7 +4,7 @@ import SecondarySidebarNavigation from "./Navigation";
 
 const SecondarySidebar = () => {
   return (
-    <Box sx={{ pl: 2, width: 350, minHeight: 1000 }}>
+    <Box sx={{ pl: 2, width: 350 }}>
       <SecondarySidebarNavigation />
     </Box>
   );

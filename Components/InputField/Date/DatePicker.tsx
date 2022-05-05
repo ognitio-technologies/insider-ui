@@ -17,6 +17,7 @@ const DateField = (props: any) => {
     error = false,
     helperText,
     inputFormat = "dd/MM/yyyy",
+    my = 0,
   } = props;
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -36,6 +37,7 @@ const DateField = (props: any) => {
               <TextField
                 {...params}
                 variant={variant}
+                sx={{ my: my }}
                 error={error}
                 helperText={helperText}
                 fullWidth

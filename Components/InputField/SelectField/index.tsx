@@ -6,7 +6,17 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import FormHelperText from "@mui/material/FormHelperText";
 
 const SelectFields = (props: any) => {
-  const { id, label, menu, helperText, inputProps, ...other } = props;
+  const {
+    id,
+    label,
+    menu,
+    error = false,
+    helperText,
+    inputProps,
+    variant = "standard",
+    my = 0,
+    ...other
+  } = props;
 
   const [value, setValue] = useState("");
 
@@ -15,11 +25,7 @@ const SelectFields = (props: any) => {
   };
 
   return (
-    <FormControl
-      variant="standard"
-      sx={{ my: 1, minWidth: 120, py: 1 }}
-      fullWidth
-    >
+    <FormControl variant={variant} sx={{ my: my }} fullWidth>
       <InputLabel id={id}>{label}</InputLabel>
       <Select
         labelId={label}
@@ -39,7 +45,7 @@ const SelectFields = (props: any) => {
           </MenuItem>
         ))}
       </Select>
-      <FormHelperText>{helperText}</FormHelperText>
+      <FormHelperText error={error}>{helperText}</FormHelperText>
     </FormControl>
   );
 };

@@ -16,13 +16,21 @@ import { _activeMainUrl } from "../../../../../../utils/activeUrl";
 const PrimarySidebarNavigation = () => {
   const router = useRouter();
 
-  const activeMainUrl = _activeMainUrl(router.pathname);
+  const validateActiveUrl = () => {
+    if (router.pathname === "/") return "home";
+    if (router.pathname !== "/")
+      return _activeMainUrl(router.pathname).substring(1);
+  };
+  const activeMainUrl = validateActiveUrl();
 
   return (
     <>
       <List component="nav">
         {MAIN_NAVBAR_DATA.map((item, index) => (
-          <Card key={index} active={activeMainUrl === item.url}>
+          <Card
+            key={index}
+            active={activeMainUrl === item.mainMenu.toLowerCase()}
+          >
             <Stack
               alignItems={`center`}
               direction="row"
@@ -35,7 +43,10 @@ const PrimarySidebarNavigation = () => {
               <Typography
                 color="primary"
                 variant="subtitle1"
-                sx={{ fontWeight: activeMainUrl === item.url && "bold" }}
+                sx={{
+                  fontWeight:
+                    activeMainUrl === item.mainMenu.toLowerCase() && "bold",
+                }}
               >
                 {item.mainMenu}
               </Typography>
@@ -60,7 +71,10 @@ const PrimarySidebarNavigation = () => {
                 <Typography
                   color="primary"
                   variant="subtitle1"
-                  sx={{ fontWeight: router.pathname === item.url && "bold" }}
+                  sx={{
+                    fontWeight:
+                      router.pathname === item.mainMenu.toLowerCase() && "bold",
+                  }}
                 >
                   {item.mainMenu}
                 </Typography>

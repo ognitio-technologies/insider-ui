@@ -28,26 +28,26 @@ export const MAIN_NAVBAR_DATA = [
   {
     icon: <OutboxIcon color="primary" />,
     mainMenu: "Requests",
-    url: "/requests/leave/single",
+    url: "/requests/leave/single-day",
     subMenu: [
       {
         label: "Leave Request",
-        url: "/requests/leave/single",
+        url: "/requests/leave/single-day",
         icon: <EventIcon color="primary" fontSize="small" />,
       },
       {
         label: "Long Leave Request",
-        url: "/requests/leave/long",
+        url: "/requests/leave/long-term",
         icon: <DateRangeIcon color="primary" fontSize="small" />,
       },
       {
         label: "Overtime Request",
-        url: "/dashboard",
+        url: "/requests/overtime",
         icon: <MoreTimeIcon color="primary" fontSize="small" />,
       },
       {
         label: "Permission Request",
-        url: "/dashboard",
+        url: "/requests/permission",
         icon: <AvTimerIcon color="primary" fontSize="small" />,
       },
     ],
