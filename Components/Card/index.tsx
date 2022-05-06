@@ -15,6 +15,8 @@ const Card = (props: any) => {
     minHeight,
     children,
     active = false,
+    mt = 0,
+    pt = 0,
     ...other
   } = props;
   return (
@@ -25,6 +27,8 @@ const Card = (props: any) => {
         minHeight: minHeight,
         height: height,
         backgroundColor: active && "primary.light",
+        mt: mt,
+        pt: pt,
       }}
       {...other}
     >

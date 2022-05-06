@@ -31,7 +31,7 @@ const LongLeaveRequestHeaderForm = (props: any) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ mt: 2 }}>
         <Grid item xs={12} md={6}>
           <DateField
             name="startDate"
@@ -62,7 +62,9 @@ const LongLeaveRequestHeaderForm = (props: any) => {
             fullWidth
             menu={LEAVE_TYPES}
             inputProps={{
-              ...register("leaveType", { required: "This field is required" }),
+              ...register("leaveType", {
+                required: "This field is required",
+              }),
             }}
             error={errors.leaveType && true}
             helperText={errors.leaveType && errors.leaveType.message}
@@ -76,7 +78,10 @@ const LongLeaveRequestHeaderForm = (props: any) => {
             placeholder="Remark"
             inputProps={{
               ...register("remark", {
-                maxLength: { value: 250, message: "Max 250 character allowed" },
+                maxLength: {
+                  value: 250,
+                  message: "Max 250 character allowed",
+                },
               }),
             }}
             error={errors.remark && true}
